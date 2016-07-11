@@ -1,6 +1,6 @@
-# Journey of Birth webapp [![Build Status](https://travis-ci.org/DarinLevesque/journeyofbirth.svg?branch=master)](https://travis-ci.org/DarinLevesque/journeyofbirth)
+# PKC Photography webapp [![Build Status](https://travis-ci.org/DarinLevesque/pkcphotography.svg?branch=master)](https://travis-ci.org/DarinLevesque/pkcphotography)
 
-This app powers **Journey of Birth** Doula services website.
+This app powers **PKC Photography's** website.
 
 ### Future plans
 
