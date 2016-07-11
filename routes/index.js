@@ -23,6 +23,10 @@ router.get('/pricing', function(req, res) {
     res.render('pricing');
 });
 
+router.get('/contact', function(req, res) {
+    res.render('contact');
+});
+
 router.get('/payment', function(req, res) {
     res.render('payment');
 });
