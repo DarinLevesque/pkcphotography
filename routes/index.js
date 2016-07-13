@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 // var stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-
+// uncomment for coming soon page to be present
 // app.get('/', function(req, res) {
 //     res.render('comingsoon', { layout: null });
 // });
