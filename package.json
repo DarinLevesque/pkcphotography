@@ -1,5 +1,5 @@
 {
-  "name": "journeyofbirth",
+  "name": "pkcphotography",
   "version": "1.0.0",
   "description": "The express & node app to run JoB.com",
   "main": "job.js",
@@ -26,5 +26,13 @@
     "grunt-exec": "^1.0.0",
     "mocha": "^2.5.3",
     "zombie": "^4.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarinLevesque/pkcphotography.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DarinLevesque/pkcphotography/issues"
+  },
+  "homepage": "https://github.com/DarinLevesque/pkcphotography#readme"
 }
