@@ -5,6 +5,6 @@ This app powers **PKC Photography's** website.
 ### Future plans
 
 - Accept Payments via stripe
-- Schedule online booking
+- Schedule online booking possibly with booking.js & timekit.io
 - Intake survey to assist with initial consultation
 - Method to digitally sign paperwork when signing up for services

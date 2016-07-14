@@ -1,8 +1,8 @@
 {
   "name": "pkcphotography",
   "version": "1.0.0",
-  "description": "The express & node app to run JoB.com",
-  "main": "job.js",
+  "description": "The express & node app to run pkcphotography.com",
+  "main": "pkc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
