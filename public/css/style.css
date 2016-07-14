@@ -682,7 +682,7 @@ p.bold{
 
 
 .whiteOverlay{
-    background: transparent url("img/gradient.png") bottom right repeat-y;
+    background: transparent url("/img/gradient.png") bottom right repeat-y;
     bottom: 0;
     height: 500px;
     right: 0;
@@ -781,7 +781,8 @@ p.bold{
 
 .portfolioIntro h2 span{
     padding:25px 50px;
-    border: solid 10px #282828;
+    border: solid 10px #cecece;
+    color: #cecece;
 }
 
 .portfolioFilters {
@@ -791,6 +792,10 @@ p.bold{
 
 .grayBackground {
     background-color: #f8f8f8;
+}
+
+.tiledBackground {
+    background:url('/img/tiled.jpg') repeat;
 }
 
 .heightItem{
@@ -831,7 +836,7 @@ p.bold{
 .portfolioIntro{
     position:relative;
     z-index:2;
-    background:url('img/portfolioIntro.jpg') no-repeat center center;
+    background:url('/img/portfolioIntro.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1273,7 +1278,7 @@ p.bold{
 .introServiceBox{
     position:relative;
     z-index:2;
-    background:url('img/backgroundService.jpg') no-repeat center center;
+    background:url('/img/backgroundService.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -3696,7 +3701,7 @@ h2.AnimatedHeadline b i em{
 }
 
 .IntroBox1 .BackgroundImage{
-    background:url('img/portfolioIntro.jpg') no-repeat center center;
+    background:url('/img/portfolioIntro.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -3707,7 +3712,7 @@ h2.AnimatedHeadline b i em{
 
 
 .IntroBox2 .BackgroundImage{
-    background:url('img/background5.jpg') no-repeat center center;
+    background:url('/img/background5.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -3718,7 +3723,7 @@ h2.AnimatedHeadline b i em{
 
 
 .IntroBox3 .BackgroundImage{
-    background:url('img/background6.jpg') no-repeat center center;
+    background:url('/img/background6.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -3729,7 +3734,7 @@ h2.AnimatedHeadline b i em{
 
 
 .IntroBox4 .BackgroundImage{
-    background:url('img/background7.jpg') no-repeat center center;
+    background:url('/img/background7.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

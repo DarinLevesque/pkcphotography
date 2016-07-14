@@ -252,6 +252,35 @@
                     s.parentNode.insertBefore(slk, s);
                   })();
                 </script>
+                <script src="/js/jquery.magnific-popup.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                "use strict";
+                $('.gallery-inner').magnificPopup({
+                    delegate: ' .popup-link',
+                    gallery: {
+                        enabled: true, // set to true to enable gallery
+
+                        navigateByImgClick: true,
+
+                        arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+
+                        tPrev: 'Previous (Left arrow key)', // title for left button
+                        tNext: 'Next (Right arrow key)', // title for right button
+
+                    },
+                    type: 'image',
+                    mainClass: 'mfp-fade',
+                    // Info about options is in docs:
+                    // http://dimsemenov.com/plugins/magnific-popup/documentation.html#options
+
+                    tLoading: 'Loading...'
+                });
+
+
+            });
+
+        </script>
 
             </body>
         </html>

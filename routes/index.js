@@ -27,6 +27,10 @@ router.get('/contact', function(req, res) {
     res.render('contact');
 });
 
+router.get('/feature-one', function(req, res) {
+    res.render('feature-one');
+});
+
 router.get('/payment', function(req, res) {
     res.render('payment');
 });
