@@ -10,7 +10,12 @@ module.exports = function(grunt) {
     // configure plugins
     grunt.initConfig({
         cafemocha: {
-            all: { src: 'qa/tests-*.js', options: { ui: 'tdd' }, }
+            all: { 
+                src: 'qa/tests-*.js',
+                options: {
+                    ui: 'tdd'
+                },
+            },
         },
         jshint: {
             app: ['pkc.js', 'public/js/**/*.js',
