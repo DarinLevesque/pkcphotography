@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var fortune = require('./lib/fortune.js');
+var nodemailer = require('nodemailer');
 
 // *** routes *** //
 var routes = require('./routes/index.js');

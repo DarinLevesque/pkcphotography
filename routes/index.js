@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var sg = require('sendgrid').SendGrid(process.env.SENDGRID_API_KEY)
-// var stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+    // var stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 // uncomment for coming soon page to be present
 // app.get('/', function(req, res) {
@@ -28,27 +28,34 @@ router.get('/contact', function(req, res) {
     res.render('contact');
 });
 
-router.post('/contact', function(req, res, next) {
-var name = req.body.name;
-var email = req.body.email;
-var phone = req.body.phone;
-var comments = req.body.comments;
-
-res.send(user_id + ' ' + token + ' ' + geo);
-
-sendgrid.send({
-    to: 'info@pkcphotography.com',
-    from: email,
-    subject: 'Message from PKC contact form',
-    text: 'My first email through SendGrid.' + name + comments
-}, function(err, json) {
-    if (err) {
-        return console.error(err); }
-    console.log(json);
+router.post('/contact', function (req, res) {
+  var mailOpts, smtpTrans;
+  //Setup Nodemailer transport, I chose gmail. Create an application-specific password to avoid problems.
+  smtpTrans = nodemailer.createTransport('SMTP', {
+      service: 'Gmail',
+      auth: {
+          user: "darinlevesque@gmail.com",
+          pass: "lnvcyvbawwtmnlds" 
+      }
+  });
+  //Mail options
+  mailOpts = {
+      from: req.body.name + ' &lt;' + req.body.email + '&gt;', //grab form data from the request body object
+      to: 'info@pkcphotography.com',
+      subject: 'Website contact form',
+      text: req.body.message
+  };
+  smtpTrans.sendMail(mailOpts, function (error, response) {
+      //Email not sent
+      if (error) {
+          res.render('contact', { title: 'Raging Flame Laboratory - Contact', msg: 'Error occured, message not sent.', err: true, page: 'contact' })
+      }
+      //Yay!! Email sent
+      else {
+          res.render('contact', { title: 'Raging Flame Laboratory - Contact', msg: 'Message sent! Thank you.', err: false, page: 'contact' })
+      }
+  });
 });
-
-});
-}
 
 router.get('/feature-one', function(req, res) {
     res.render('feature-one');

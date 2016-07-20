@@ -713,6 +713,16 @@ p.bold{
 #about{
     background-color: white;
 }
+
+#about2{
+    background-color: #007F7F;
+}
+
+#about2 p {
+    color: #E5E5E5
+}
+
+
 #about .container{
     padding-top:200px;
 }
