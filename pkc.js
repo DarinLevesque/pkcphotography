@@ -2,7 +2,6 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var fortune = require('./lib/fortune.js');
-var nodemailer = require('nodemailer');
 
 // *** routes *** //
 var routes = require('./routes/index.js');
@@ -15,8 +14,16 @@ var handlebars = require('express-handlebars')
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
+// Bodyparser
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
+
 // Assign Port
 app.set('port', process.env.PORT || 3000);
+
 
 // remove header venurability
 app.disable('x-powered-by');

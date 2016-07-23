@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var nodemailer = require('nodemailer');
 var sg = require('sendgrid').SendGrid(process.env.SENDGRID_API_KEY)
     // var stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
@@ -28,33 +29,60 @@ router.get('/contact', function(req, res) {
     res.render('contact');
 });
 
-router.post('/contact', function (req, res) {
-  var mailOpts, smtpTrans;
-  //Setup Nodemailer transport, I chose gmail. Create an application-specific password to avoid problems.
-  smtpTrans = nodemailer.createTransport('SMTP', {
-      service: 'Gmail',
-      auth: {
-          user: "darinlevesque@gmail.com",
-          pass: "lnvcyvbawwtmnlds" 
-      }
-  });
-  //Mail options
-  mailOpts = {
-      from: req.body.name + ' &lt;' + req.body.email + '&gt;', //grab form data from the request body object
-      to: 'info@pkcphotography.com',
-      subject: 'Website contact form',
-      text: req.body.message
-  };
-  smtpTrans.sendMail(mailOpts, function (error, response) {
-      //Email not sent
-      if (error) {
-          res.render('contact', { title: 'Raging Flame Laboratory - Contact', msg: 'Error occured, message not sent.', err: true, page: 'contact' })
-      }
-      //Yay!! Email sent
-      else {
-          res.render('contact', { title: 'Raging Flame Laboratory - Contact', msg: 'Message sent! Thank you.', err: false, page: 'contact' })
-      }
-  });
+router.post('/contact', function(req, res) {
+    // var mailOpts, smtpConfig;
+    // //Setup Nodemailer transport, I chose gmail. Create an application-specific password to avoid problems.
+    // // smtpTrans = nodemailer.createTransport('SMTP', {
+    // //     service: 'Gmail',
+    // //     auth: {
+    // //         user: "darinlevesque@gmail.com",
+    // //         pass: "lnvcyvbawwtmnlds"
+    // //     }
+    // // });
+    // var smtpConfig = nodemailer.createTransport('smtps://darinlevesque%40gmail.com:lnvcyvbawwtmnlds@smtp.gmail.com');
+    // //Mail options
+    // mailOpts = {
+    //     from: req.body.name + ' &lt;' + req.body.email + '&gt;', //grab form data from the request body object
+    //     to: 'info@pkcphotography.com',
+    //     subject: 'Website contact form',
+    //     text: req.body.message
+    // };
+    // smtpConfig.sendMail(mailOpts, function(error, info) {
+    //     //Email not sent
+    //     if (error) {
+    //         res.render('contact', { title: 'Raging Flame Laboratory - Contact', msg: 'Error occured, message not sent.', err: true, page: 'contact' })
+    //         return console.log(error);
+    //     }
+    //     //Yay!! Email sent
+    //     else {
+    //         res.render('contact', { title: 'Raging Flame Laboratory - Contact', msg: 'Message sent! Thank you.', err: false, page: 'contact' })
+    //         console.log('Message sent: ' + info.response);
+    //     }
+    // });
+    var request = sg.emptyRequest()
+    request.body = {
+        "personalizations": [{
+            "to": [{
+                "email": "info@pkcphotography.com"
+            }],
+            "subject": "PKC Photography Contact Form"
+        }],
+        "from": {
+            "email": req.body.email,
+        },
+        "content": [{
+            "type": "text/plain",
+            "value": req.body.name + " " + req.body.phone + " " + req.body.comments
+        }]
+    };
+    request.method = 'POST'
+    request.path = '/v3/mail/send'
+    sg.API(request, function(response) {
+        console.log(response.statusCode)
+        console.log(response.body)
+        console.log(response.headers)
+        res.end("Email Sent Successfully");
+    })
 });
 
 router.get('/feature-one', function(req, res) {

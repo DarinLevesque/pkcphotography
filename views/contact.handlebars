@@ -58,7 +58,7 @@
                 </ul>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12 text-center" data-scroll-reveal="enter right move over 1s after 0.2s">
-                <div id="result"></div>
+                <div id="result">{{ sent }}</div>
                 <form method="post" action="/contact" name="contactform" id="contactform">
                     <fieldset id="contact_form">
                         <label for="name">
@@ -74,28 +74,6 @@
                             <textarea name="comments" id="comments" placeholder="Enter Your Message"></textarea>
                         </label>
                         <input type="submit" class="submit btn btn-default btn-black" id="submit" value="Submit">
-                    </fieldset>
-                </form>
-            </div>
-            <h1>Contact Form</h1>
-            <div class="content">
-                <form action="/contact" name="contactus" id="contactus" method="post">
-                    <fieldset>
-                        <p>
-                            <label for="name">Name:</label><br/>
-                            <input name="name" type="text" value="" id="name"/>
-                        </p>
-                        <p>
-                            <label for="email">Email:</label><br/>
-                            <input name="email" type="text" value="" id="email"/>
-                        </p>
-                        <p>
-                            <label for="message">Message:</label><br/>
-                            <textarea name="message" cols="40" rows="10" id="message"></textarea>
-                        </p>
-                        <p>
-                            <input name="submit" type="submit" value="Send" id="submit"/>
-                        </p>
                     </fieldset>
                 </form>
             </div>
