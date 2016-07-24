@@ -28,5 +28,5 @@ module.exports = function(grunt) {
         },
     });
     // register tasks
-    grunt.registerTask('default', ['cafemocha:all', 'jshint', 'exec']);
+    grunt.registerTask('default', ['cafemocha', 'jshint', 'exec']);
 };

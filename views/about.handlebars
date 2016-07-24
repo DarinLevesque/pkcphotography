@@ -11,7 +11,7 @@
     </div>
 </div>
 <!--end OVERLAY FOR THE PORTFOLIO MENU // DONT' DELETE IF YOU PLAN TO USE THIS OPTION-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+{{!-- <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--/* about SECTION */-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <section id="about">
@@ -25,7 +25,7 @@
                 <span>About us</span>
                 </h2>
                 <p data-scroll-reveal="enter bottom move 10px over 1s after 0.2s">
-                    We're a south Florida couple who have a passion for making people 
+                    We're a south Florida couple who have a passion for making people
                 </p>
                 <img src="/img/separatorBlack.png" class="img-responsive center-block separator" alt="separator">
             </div>
@@ -146,7 +146,7 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--/* END about SECTION */-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-{{!-- <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--/* TEXT SEPARATOR */-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <section id="text-separator-clients">
@@ -191,6 +191,24 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <section id="about2">
     <div class="container">
+        <h1 class="parallaxLetter letter1 blue" data-stellar-ratio="1.5" data-stellar-vertical-offset="0">C</h1>
+        <h1 class="parallaxLetter letter2 blue" data-stellar-ratio="0.5" data-stellar-vertical-offset="200">K</h1>
+        <!--header-->
+        <div class="row sectionIntro">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h2 data-scroll-reveal="enter top move 10px over 1s after 0.2s">
+                <span>About us</span>
+                </h2>
+                <p data-scroll-reveal="enter bottom move 10px over 1s after 0.2s">
+                    We're a south Florida couple who have a passion for making people
+                </p>
+                <img src="/img/separatorBlack.png" class="img-responsive center-block separator" alt="separator">
+            </div>
+        </div>
+        <!--end header-->
+        <!--content-->
+        <h1 class="parallaxLetter letter3 blue" data-stellar-ratio="1.5" data-stellar-vertical-offset="-600">P</h1>
+        <h1 class="parallaxLetter letter4 blue" data-stellar-ratio="0.8" data-stellar-vertical-offset="0">P</h1>
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <img src="/img/PKCPhotoLogoSQR.png" class="img-responsive" alt="responsive">
@@ -215,6 +233,70 @@
         </div>
     </div>
 </section>
+<section class="faqIntro" id="faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>F.A.Q.</h1>
+                <br>
+                <br>
+            </div>
+            <div class="col-md-6">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                What locations do you serve?
+                            </a>
+                            </h6>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                We're located in Tradition on the west side of Port St Lucie, but we can shoot on location anywhere from West Palm Beach to Ft. Pierce, even further if you ask us nicely. (;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                What is a typical photoshoot like?
+                            </a>
+                            </h6>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>The short answer is it depends on what your looking for.</p>
+                                <p>The long answer is we'll first setup either a phone call, email or text/chat "session" to discuss what you're looking for in both timeframe and in your finished photos. Next we'll book a timeslot on when you want your session to occur (for birth photography we'll go off your due date and I'll block off 2 weeks on either side of your date that I'll make myself available). Lastly, we shoot! and I edit and send you your photos for you to download, share, print or whatever your pleasure is.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                Sweet website, where'd you get it?
+                            </a>
+                            </h6>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>This website was built using <a href="https://nodejs.org/en/">Node.js</a> with <a href="https://expressjs.com/">Express</a> framework integrated with <a href="http://handlebarsjs.com/">handlebars</a> and all served up with <a href="https://www.nginx.com/">NGiNX</a>. The folks at <a herf="https://themeforest.net/user/artbreeze">artBreeze Studios</a> provided the html template and Darin tied all of it together.</p>
+                                <h6>Check back frequently because this is just the beginning!</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+            <div class="col-md-6">
+                    <h5>Here are some of our most asked questions, if you don't find an answer here just <a href="/contact">email us!</a></h5>
+                </div>
+        </div>
+    </div>
+</section>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--/* end about SECTION */-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -229,24 +311,26 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                <div class="col-sm-7">
-                <h4>The Brains</h4>
-                <p>Kelli is the brains behind this operation. Armed with a communications degree from Ithica College, a sonographer license, a 500 hour Yoga instructor, trained as a birth doula, and ending strong as being a mother to 4 silly kids...she makes our world go round.</p>
-                <span>She also runs <a href="http://www.journeyofbirth.com">Journey of Birth</a>
-                </div>
-                <div class="col-sm-5"><img src="/img/KelliHair.jpg" class="img-responsive" alt="responsive"></div>
+                    <div class="col-sm-7">
+                        <h4>Kelli</h4>
+                        <h5>The Brains</h5>
+                        <p>Kelli is the brains behind this operation. Armed with a communications degree from Ithica College, a sonographer license, a 500 hour Yoga instructor, trained as a birth doula, and ending strong as being a mother to 4 silly kids...she makes our world go round.</p>
+                        <span>She also runs <a href="http://www.journeyofbirth.com">Journey of Birth</a>
+                    </div>
+                    <div class="col-sm-5"><img src="/img/KelliHair.jpg" class="img-responsive" alt="responsive"></div>
                 </div>
                 <hr>
                 <div class="row">
-                <div class="col-sm-5"><img src="/img/darincamera.jpg" class="img-responsive" alt="responsive"></div>
-                <div class="col-sm-7">
-                <h4>The Braun</h4>
-                <p>Darin is the braun behind PKC Photography. He's always had a passion for photography and graphic art. In fact he built this website using Node.js with express framework on a dokku container.</p></div>
+                    <div class="col-sm-5"><img src="/img/darincamera.jpg" class="img-responsive" alt="responsive"></div>
+                    <div class="col-sm-7">
+                        <h4>Darin</h4>
+                        <h5>The Braun</h5>
+                        <p>Darin is the braun behind PKC Photography. He's always had a passion for photography and graphic art. In fact he built this website using Node.js with express framework on a dokku container.</p></div>
+                    </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
