@@ -17,7 +17,6 @@ app.set('view engine', 'handlebars');
 // Bodyparser
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
-
 // parse application/json
 app.use(bodyParser.json())
 
