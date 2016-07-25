@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
     // load plugins
     [
-        'grunt-cafe-mocha',
+        'grunt-mocha-test',
         'grunt-contrib-jshint',
         'grunt-exec',
     ].forEach(function(task) {
@@ -9,8 +9,8 @@ module.exports = function(grunt) {
     });
     // configure plugins
     grunt.initConfig({
-        cafemocha: {
-            all: { 
+        mochaTest: {
+            test: { 
                 src: 'qa/tests-*.js',
                 options: {
                     ui: 'tdd'
@@ -28,5 +28,7 @@ module.exports = function(grunt) {
         },
     });
     // register tasks
-    grunt.registerTask('default', ['cafemocha', 'jshint', 'exec']);
+    grunt.registerTask('default', ['mochaTest', 'jshint', 'exec']);
 };
+
+

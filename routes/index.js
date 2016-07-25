@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var nodemailer = require('nodemailer');
-var sg = require('sendgrid').SendGrid(process.env.SENDGRID_API_KEY)
+var sg = require('sendgrid').SendGrid(process.env.SENDGRID_API_KEY);
     // var stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 // uncomment for coming soon page to be present
