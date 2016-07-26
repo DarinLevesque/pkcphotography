@@ -18,17 +18,15 @@ module.exports = function(grunt) {
             },
         },
         jshint: {
-            app: ['pkc.js', 'public/js/**/*.js',
-                'lib/**/*.js'
-            ],
+            app: ['pkc.js', 'lib/**/*.js'],
             qa: ['Gruntfile.js', 'public/qa/**/*.js', 'qa/**/*.js'],
         },
         exec: {
-            linkchecker: { cmd: 'linkchecker http://localhost:3000' }
+            // linkchecker: { cmd: 'linkchecker http://localhost:3000' }
         },
     });
     // register tasks
-    grunt.registerTask('default', ['mochaTest', 'jshint', 'exec']);
+    grunt.registerTask('default', ['mochaTest', 'jshint']);
 };
 
 
