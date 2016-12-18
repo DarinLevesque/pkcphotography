@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     // configure plugins
     grunt.initConfig({
         mochaTest: {
-            test: { 
+            test: {
                 src: 'qa/tests-*.js',
                 options: {
                     ui: 'tdd'
@@ -28,5 +28,3 @@ module.exports = function(grunt) {
     // register tasks
     grunt.registerTask('default', ['mochaTest', 'jshint']);
 };
-
-
