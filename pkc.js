@@ -1,3 +1,4 @@
+var compression = require('compression');
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -13,6 +14,13 @@ var handlebars = require('express-handlebars')
     });
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
+
+app.use(compression());
+
+// Helmet
+
+var helmet = require('helmet');
+app.use(helmet());
 
 // Bodyparser
 // parse application/x-www-form-urlencoded
